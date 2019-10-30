@@ -11,6 +11,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.android.gms.maps.model.LatLng;
+
 public class TrainAdapter extends RecyclerView.Adapter<TrainAdapter.MyViewHolder> {
     Context context;
 
@@ -34,7 +36,8 @@ myViewHolder.c1.setOnClickListener(new View.OnClickListener() {
     public void onClick(View view) {
         Context context=view.getContext();
         Intent intent=new Intent(context,Map.class);
-        intent.putExtra(latlng1,1);
+        LatLng latlng1=new LatLng(31.342205,75.576007);
+        intent.putExtra("latlong",latlng1);
         context.startActivity(intent);
     }
 });
@@ -42,7 +45,8 @@ myViewHolder.c2.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View view) {
         Intent intent=new Intent(context,Map.class);
-        intent.putExtra(latlng1,1);
+        LatLng latlng1=new LatLng(31.342205,75.576007);
+        intent.putExtra("latlong",latlng1);
         context.startActivity(intent);
 
     }
@@ -51,7 +55,8 @@ myViewHolder.c3.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View view) {
         Intent intent=new Intent(context,Map.class);
-        intent.putExtra(latlng1,1);
+        LatLng latlng1=new LatLng(31.342205,75.576007);
+        intent.putExtra("latlong",latlng1);
         context.startActivity(intent);
 
     }
